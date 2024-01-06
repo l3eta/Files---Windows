@@ -945,7 +945,7 @@
 												x:Name="ShortcutGlyphElement"
 												HorizontalAlignment="Left"
 												VerticalAlignment="Bottom"
-												x:Load="{x:Bind IsShortcut}">
+												x:Load="{x:Bind ShowShortcutIcons}">
 												<uc:OpacityIcon Style="{StaticResource ColorIconShortcut}" />
 											</Border>
 											<Image

@@ -386,6 +386,10 @@ namespace Files.App.Services.Settings
 			get => Get(true);
 			set => Set(value);
 		}
+		public bool ShowShortcutIcons {
+			get => Get(true);
+			set => Set(value);
+		}
 
 		protected override void RaiseOnSettingChangedEvent(object sender, SettingChangedEventArgs e)
 		{
@@ -429,6 +433,7 @@ namespace Files.App.Services.Settings
 				case nameof(DoubleClickToGoUp):
 				case nameof(ShowFileExtensionWarning):
 				case nameof(ShowCheckboxesWhenSelectingItems):
+				case nameof(ShowShortcutIcons):
 					Analytics.TrackEvent($"Set {e.SettingName} to {e.NewValue}");
 					break;
 			}

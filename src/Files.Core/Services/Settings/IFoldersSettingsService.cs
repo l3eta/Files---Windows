@@ -258,6 +258,7 @@ namespace Files.Core.Services.Settings
 		/// </summary>
 		bool SelectFilesOnHover { get; set; }
 
+
 		/// <summary>
 		/// Gets or sets a value indicating if double clicking a blank space should go up a directory.
 		/// </summary>
@@ -272,5 +273,10 @@ namespace Files.Core.Services.Settings
 		/// Gets or sets a value indicating whether or not to show checkboxes when selecting items.
 		/// </summary>
 		bool ShowCheckboxesWhenSelectingItems { get; set; }
+
+		/// <summary>
+		/// Gets or sets a value indicating whether or not to show shortcut icons.
+		/// </summary>
+		bool ShowShortcutIcons { get; set; }
 	}
 }

@@ -470,6 +470,17 @@ namespace Files.App.ViewModels.Settings
 			}
 		}
 
+		public bool ShowShortcutIcons {
+			get => UserSettingsService.FoldersSettingsService.ShowShortcutIcons;
+			set {
+				if (value != UserSettingsService.FoldersSettingsService.ShowShortcutIcons) {
+					UserSettingsService.FoldersSettingsService.ShowShortcutIcons = value;
+
+					OnPropertyChanged();
+				}
+			}
+		}
+
 		public void ResetLayoutPreferences()
 		{
 			// Is this proper practice?

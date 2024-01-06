@@ -190,7 +190,7 @@ namespace Files.App.Utils
 			get => iconOverlay;
 			set
 			{
-				if (value is not null)
+				if (value is not null && (IsShortcut && ShowShortcutIcons))
 				{
 					SetProperty(ref iconOverlay, value);
 				}
@@ -363,6 +363,8 @@ namespace Files.App.Utils
 
 			return $"{Name}, {suffix}";
 		}
+
+		public bool ShowShortcutIcons => IsShortcut && UserSettingsService.FoldersSettingsService.ShowShortcutIcons;
 
 		public bool IsFolder => PrimaryItemAttribute is StorageItemTypes.Folder;
 		public bool IsRecycleBinItem => this is RecycleBinItem;

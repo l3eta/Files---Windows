@@ -263,6 +263,17 @@
 					Style="{StaticResource RightAlignedToggleSwitchStyle}" />
 			</local:SettingsBlockControl>
 
+
+			<!--  Show Shortcut Icons  -->
+			<local:SettingsBlockControl Title="Show shortcut icons" HorizontalAlignment="Stretch">
+				<local:SettingsBlockControl.Icon>
+					<FontIcon Glyph="&#xE73A;" />
+				</local:SettingsBlockControl.Icon>
+				<ToggleSwitch
+					AutomationProperties.Name="Show shortcut icons"
+					IsOn="{x:Bind ViewModel.ShowShortcutIcons, Mode=TwoWay}"
+					Style="{StaticResource RightAlignedToggleSwitchStyle}" />
+			</local:SettingsBlockControl>
 			<!--  Behaviors  -->
 			<TextBlock
 				Padding="0,16,0,4"
